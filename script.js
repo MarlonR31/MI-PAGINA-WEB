@@ -1,34 +1,14 @@
-function validateForm() {
-    const email = document.getElementById('email').value.trim();
-    const password = document.getElementById('password').value.trim();
-    
-    let isValid = true;
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita que el formulario se envíe
 
-    // Limpiar mensajes de error
-    document.getElementById('emailError').textContent = '';
-    document.getElementById('passwordError').textContent = '';
+    const email = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
 
-    // Validar email
-    if (!validateEmail(email)) {
-        document.getElementById('emailError').textContent = 'Por favor, introduce un email válido.';
-        isValid = false;
+    if (username === 'Marlon' && password === 'Liliana') {
+        document.getElementById('message').innerText = 'Inicio de sesión exitoso!';
+        window.location.href = "Portalmarlon.html";
+    } else {
+        document.getElementById('message').innerText = 'Usuario o contraseña incorrectos.';
+        document.getElementById('message').style.color = 'red';
     }
-
-    // Validar contraseña
-    if (password.length === 0) {
-        document.getElementById('passwordError').textContent = 'La contraseña no puede estar vacía.';
-        isValid = false;
-    }
-
-    if (isValid) {
-        alert("Formulario enviado con éxito!");
-        // Aquí podrías agregar la lógica para enviar el formulario
-        // Por ejemplo, hacer una llamada a la API del servidor.
-        document.getElementById('loginForm').reset(); // Reiniciar el formulario
-    }
-}
-
-function validateEmail(email) {
-   const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Expresión regular básica para validar el email
-   return re.test(String(email).toLowerCase());
-}
+});
