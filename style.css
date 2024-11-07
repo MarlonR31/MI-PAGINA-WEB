@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0; /* Color de fondo suave */
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     height: 100vh; /* Altura completa de la ventana */
