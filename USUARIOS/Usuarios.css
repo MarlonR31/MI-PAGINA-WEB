@@ -23,6 +23,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    width: 600px;
 }
 
 .profile {
