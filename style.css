@@ -7,6 +7,11 @@ body {
     height: 100vh; /* Altura completa de la ventana */
     margin: 0; /* Sin márgenes */
     background-image: url('IMG/PERFIL.jpg');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen en la pantalla */
+    height: 100vh; /* Hace que el body ocupe toda la altura de la ventana */
+    margin: 0; /* Elimina el margen por defecto */
 }
 
 .container {
