@@ -3,7 +3,15 @@ body {
     background-color: #474747;
     margin: 0;
     padding: 0;
+    font-size: 16px;
 }
+
+@media(max-width: 600px)
+    {
+        body{
+            font-size: 14px;
+        }
+    }
 
 .container {
     max-width: 600px;
