@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleccionar Perfil</title>
+    <style>
+        body {
+            background-color: #141414; /* Color de fondo similar a Netflix */
+            color: white;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .netflix-logo {
+            margin-top: 20px;
+            color: #e50914; /* Color rojo Netflix */
+            font-size: 2em;
+        }
+
+        .question {
+            margin: 30px 0;
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        .profiles-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .profile {
+            width: 150px;
+            height: 200px;
+            margin: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative; /* Para posicionar el texto */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .profile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Mantiene la proporción de la imagen */
+        }
+
+        .profile-name {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0,0,0,0.5); /* Fondo semitransparente */
+            text-align: center;
+            padding: 5px 0; /* Espaciado vertical */
+        }
+
+        @media (max-width: 600px) {
+            .profile {
+                width: 120px; /* Tamaño más pequeño en pantallas pequeñas */
+                height: 160px; 
+                font-size: 0.8em; /* Reducir tamaño de texto */
+            }
+            
+            .question {
+                font-size: 1.2em; /* Reducir tamaño de texto */
+                margin-top: 20px; 
+                margin-bottom: 20px; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="netflix-logo">Netflix</div>
+    <div class="question">Selecciona tu perfil</div>
+
+    <div class="profiles-container">
+       <a href="INICIO/index.html">
+        <div class="profile">
+            <img src="IMG/Novios.jpg" alt="Perfil Usuario 1">
+            <div class="profile-name" style="color: #ffffff;">Usuario 1</div>
+        </div>
+       </a> 
+        <div class="profile">
+            <img src="https://via.placeholder.com/150x200.png?text=Usuario+2" alt="Perfil Usuario 2">
+            <div class="profile-name">Usuario 2</div>
+        </div>
+        <div class="profile">
+            <img src="https://via.placeholder.com/150x200.png?text=Usuario+3" alt="Perfil Usuario 3">
+            <div class="profile-name">Usuario 3</div>
+        </div>
+        <div class="profile">
+            <img src="https://via.placeholder.com/150x200.png?text=Usuario+4" alt="Perfil Usuario 4">
+            <div class="profile-name">Usuario 4</div>
+        </div>
+    </div>
+
+</body>
+</html>

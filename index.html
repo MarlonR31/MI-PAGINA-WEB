@@ -30,7 +30,7 @@
           <label for="rememberMe">Recuérdame</label>
           
           <div style="justify-content: center; display: flex;">
-              <a href="/USUARIOS/Usuarios.html">
+              <a href="Usuarios.html">
                   <button style="width: 330px;" id="btnLogin">
                       INICIAR SESION
                   </button>
@@ -39,20 +39,6 @@
           </div>
       </form>
         <form id="loginForm">
-          <a>HOLA</a>
-            <label for="email">Email o número de celular:</label>
-            <input type="text" id="email" name="email" required>
-            <span id="emailError" class="error"></span>
-
-            <label for="password">Contraseña:</label>
-            <input type="password" id="password" name="password" required>
-            <span id="passwordError" class="error"></span>
-
-            
-
-            <button type="button" onclick="validateForm()" style="height: 40px;" id="btnLogin">
-              Iniciar sesión
-            </button> <br> <br>
             <div style="text-align: center; color: aliceblue;">
               O
             </div> <br>
@@ -78,7 +64,7 @@
 
           if (username === 'Marlon' && password === 'Liliana') {
               document.getElementById('message').innerText = 'Inicio de sesión exitoso!';
-              window.location.href = "/USUARIOS/Usuarios.html";
+              window.location.href = "Usuarios.html";
           } else {
               document.getElementById('message').innerText = 'Usuario o contraseña incorrectos.';
               document.getElementById('message').style.color = 'red';
