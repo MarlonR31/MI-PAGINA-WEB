@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="stylesheet" href="estilos.css">
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
 	<title>Netflix</title>
 </head>
@@ -11,7 +11,7 @@
 	<header>
 		<div class="contenedor">
 			<h2 class="logotipo">NETFLIX</h2>
-			<nav>
+			<nav> 
 				<a href="/Usuarios.html" class="activo">Inicio</a>
 				<a href="#">Programas</a>
 				<a href="#">Películas</a>
@@ -24,7 +24,7 @@
 	<main>
 		<div class="pelicula-principal">
 			<div class="contenedor">
-				<h3 class="titulo">Interestellar</h3>
+				<h3 class="titulo">VENOM: El último baile </h3>
 				<p class="descripcion">
 					Narra las aventuras de un grupo de exploradores que hacen uso de un agujero de gusano recientemente descubierto para superar las limitaciones de los viajes espaciales tripulados y vencer las inmensas distancias que tiene un viaje interestelar.
 				</p>
@@ -36,5 +36,55 @@
 	
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 	<script src="js/main.js"></script>
+
+	<div>
+		<div class="video-background">
+			<video autoplay muted loop>
+				<source src="img/Venom.mp4" type="video/mp4">
+				Tu navegador no soporta el video.
+			</video>
+		</div>
+		<div class="contenido">
+			<h1>Bienvenido a Mi Página</h1>
+			<p>Este es un ejemplo de página con video de fondo.</p>
+		</div>
+		<style>
+			* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video-background video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contenido {
+    position: relative; /* Esto permite que el contenido esté encima del video */
+    z-index: 1; /* Asegúrate de que el contenido esté en frente */
+    color: white; /* Cambia el color del texto según necesites */
+}
+		</style>
+	</div>
 </body>
 </html>
