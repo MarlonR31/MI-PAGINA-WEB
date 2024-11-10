@@ -27,26 +27,27 @@
 				<p class="descripcion">
 					Narra las aventuras de un grupo de exploradores que hacen uso de un agujero de gusano recientemente descubierto para superar las limitaciones de los viajes espaciales tripulados y vencer las inmensas distancias que tiene un viaje interestelar.
 				</p>
-				<button id="myVideo" width="640" height="360" controls preload="metadata" poster="tu_poster.jpg" role="button" class="boton">
+				<button id="playButton" role="button" class="boton">
 					<i class="fas fa-play"></i>
 					Reproducir</button>
 				<button role="button" class="boton"><i class="fas fa-info-circle"></i>Más información</button>
-			</div>
-		</div>
-		<video id="playButton" width="640" height="360" controls preload="metadata" poster="tu_poster.jpg">
-			<source src="img/Venom.mp4" type="video/mp4">
-			Tu navegador no admite el elemento video.
-		</video>
-	</main>
-	<script>
-        const video = document.getElementById('myVideo');
-        const playButton = document.getElementById('playButton');
 
-        playButton.addEventListener('click', () => {
-            video.play();
-            playButton.style.display = "none"; // Ocultar el botón después de hacer clic
-        });
-    </script>
+				<video id="venom" width="640" height="360" controls preload="metadata" poster="tu_poster.jpg">
+					<source src="img/Venom.mp4" type="video/mp4">
+					Tu navegador no admite el elemento video.
+				</video>
+			</div>
+			<script>
+				const video = document.getElementById('venom');
+				const playButton = document.getElementById('playButton');
+
+				playButton.addEventListener('click', () => {
+					video.play();
+					playButton.style.display = "none"; // Ocultar el botón después de hacer clic
+				});
+			</script>
+		</div>
+	</main>
 
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 	<script src="js/main.js"></script>
