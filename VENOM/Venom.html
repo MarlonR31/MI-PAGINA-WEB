@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Vídeo</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+video {
+    display: block;
+    margin: 20px auto;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Reproductor de Vídeo</h1>
+        <video id="myVideo" width="640" height="360" controls preload="metadata" poster="tu_poster.jpg">
+            <source src="Venom.mp4" type="video/mp4">
+            Tu navegador no admite el elemento video.
+        </video>
+        <button id="playButton">Reproducir</button>
+    </div>
+    <script>
+        const video = document.getElementById('myVideo');
+        const playButton = document.getElementById('playButton');
+
+        playButton.addEventListener('click', () => {
+            video.play();
+            playButton.style.display = "none"; // Ocultar el botón después de hacer clic
+        });
+    </script>
+    
+</body>
+</html>
