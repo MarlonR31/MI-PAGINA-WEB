@@ -42,7 +42,7 @@
             transition: 1s;
         }
         .slider .list img{
-            width: 1000px;
+            width: 1300px;
             max-width: 100vw;
             height: 100%;
             object-fit: cover;
@@ -108,24 +108,24 @@
         <div class="slider">
             <div class="list">
                 <div class="item">
-                    <img src="Foto_1.jpg" alt="1">
+                    <img src="Foto_1.jpg" alt="">
                 </div>
                 <div class="item">
-                    <img src="Foto_2.jpg" alt="2">
+                    <img src="Foto_2.jpg" alt="">
                 </div>
             </div>
+            <div class="buttons">
+                <button id="prev"><</button>
+                <button id="next">></button>
+            </div>
+            <ul class="dots">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
         </div>
-        <div class="buttons">
-            <button id="prev"><</button>
-            <button id="next">></button>
-        </div>
-        <ul class="dots">
-            <li class="active"></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
         <script>
             let slider = document.querySelector('.slider .list');
             let items = document.querySelectorAll('.slider .list .item');
@@ -152,9 +152,7 @@
                 dots[active].classList.add('active');
 
                 clearInterval(refreshInterval);
-                refreshInterval = setInterval(()=> {next.click()}, 3000);
-
-                
+                refreshInterval = setInterval(()=> {next.click()}, 3000); 
             }
 
             dots.forEach((li, key) => {
