@@ -8,7 +8,7 @@
 	<title>Netflix</title>
 	<style>
 		video{
-			display: flex;
+			display: none;
 			justify-content: center;
 			align-items: center;
 		}
@@ -47,7 +47,7 @@
 					Mas Informacion
 				</button> <br> <br> <br>
 					
-				<video id="venom" width="100" height="100" controls preload="metadata" poster="tu_poster.jpg">
+				<video id="venom" width="100" height="200" controls preload="metadata" poster="tu_poster.jpg">
 					<source src="img/Venom.mp4" type="video/mp4">
 					Tu navegador no admite el elemento video.
 				</video>
@@ -60,6 +60,7 @@
 
 				// Agregar evento al botón
 				btn.addEventListener('click', function() {
+					video.style.display = 'block'; // Mostrar el video
 					if (video.requestFullscreen) {
 						video.requestFullscreen();
 					} else if (video.mozRequestFullScreen) { // Firefox
