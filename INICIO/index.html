@@ -33,7 +33,7 @@
 				<button id="playButton" role="button" class="boton">
 					<i class="fas fa-play"></i>
 					Reproducir</button>
-				<button role="button" class="boton"><i class="fas fa-info-circle"></i>
+				<button id="stopBtn" role="button" class="boton"><i class="fas fa-info-circle"></i>
 					Detener
 				</button>
 				<button role="button" class="boton"><i class="fas fa-info-circle"></i>
@@ -49,6 +49,7 @@
 				// Obtener elementos
 				const video = document.getElementById('venom');
         		const btn = document.getElementById('playButton');
+				const stopBtn = document.getElementById('stopBtn');
 
 				// Agregar evento al botón
 				btn.addEventListener('click', function() {
@@ -62,6 +63,12 @@
 						video.msRequestFullscreen();
 					}
 					video.play(); // Reproducir el video al ir a pantalla completa
+				});
+
+				// Agregar evento al botón de detener
+				stopBtn.addEventListener('click', function() {
+					video.pause(); // Pausar el video
+					video.currentTime = 0; // Reiniciar el tiempo del video a 0
 				});
 			</script>
 		</div>
