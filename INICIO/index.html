@@ -18,7 +18,7 @@
 				<a href="/CARTA/Carta.html">Carta para ti ❤</a> <BR>
 				<a href="/GALERIA/Galeria.html">Galeria 💘</a>
 				<a href="/DESEOS/Deseos.html">Deseos ✨🎉</a>
-				<a href="#">Mi lista</a>
+				<a href="/LIST/List.html">Mi lista</a>
 			</nav>
 		</div>
 	</header>
@@ -43,12 +43,22 @@
 				</video>
 			</div>
 			<script>
+				// Obtener elementos
 				const video = document.getElementById('venom');
-				const playButton = document.getElementById('playButton');
+        		const btn = document.getElementById('playButton');
 
-				playButton.addEventListener('click', () => {
-					video.play();
-					playButton.style.display = "none"; // Ocultar el botón después de hacer clic
+				// Agregar evento al botón
+				btn.addEventListener('click', function() {
+					if (video.requestFullscreen) {
+						video.requestFullscreen();
+					} else if (video.mozRequestFullScreen) { // Firefox
+						video.mozRequestFullScreen();
+					} else if (video.webkitRequestFullscreen) { // Chrome, Safari y Opera
+						video.webkitRequestFullscreen();
+					} else if (video.msRequestFullscreen) { // IE/Edge
+						video.msRequestFullscreen();
+					}
+					video.play(); // Reproducir el video al ir a pantalla completa
 				});
 			</script>
 		</div>
